@@ -1,5 +1,6 @@
 public class App {
+    private GameManager _gameManager;
     public static void main (String[] args){
-        System.out.println("Hello");
+        GameManager _gameManager = new GameManager();
     }
 }
