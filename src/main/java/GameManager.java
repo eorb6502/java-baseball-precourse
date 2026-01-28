@@ -35,7 +35,6 @@ public class GameManager {
 
     private void handleInputNumberPhase() {
         _userNumber = _inputManager.PredictionInput();
-        System.out.println(_userNumber);
         _turnPhase = TurnPhase.judgeResult;
     }
     
