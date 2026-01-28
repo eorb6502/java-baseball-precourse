@@ -25,6 +25,10 @@ dependencies {
     testImplementation 'org.assertj:assertj-core:3.25.3'
 }
 
+run {
+    standardInput = System.In
+}
+
 test {
     useJUnitPlatform()
 }

@@ -1,3 +1,3 @@
 public enum TurnPhase {
-    idle, generateNumber, inputNumber, judgeResult
+    quit, idle, generateNumber, inputNumber, judgeResult
 }
