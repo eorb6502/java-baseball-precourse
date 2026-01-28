@@ -10,7 +10,7 @@ public class GameManager {
     private String _userNumber;
     private Map<TurnPhase, Runnable> _phaseHandler;
     public GameManager(){
-        _turnPhase = TurnPhase.idle;
+        _turnPhase = TurnPhase.generateNumber;
         _numberGenerator = new NumberGenerator();
         _inputManager = new InputManager();
         _judgeManager = new JudgeManager();
@@ -39,9 +39,11 @@ public class GameManager {
     }
     
     private void handleJudgeResultPhase() {
-        boolean result = _judgeManager.JudgeResult(_generatedNumber, _userNumber);
-        if (!result) {
+        JudgeResult result = _judgeManager.JudgeResult(_generatedNumber, _userNumber);
+        if (result.strike() != 3) {
             _turnPhase = TurnPhase.inputNumber;
+            String resultString = result.strike() + result.ball() == 0 ? "낫씽" : result.strike() + "스트라이크 " + result.ball() + "볼";
+            System.out.println(resultString);
             return;
         }
         System.out.println("3개의 숫자를 모두 맞히셨습니다! 게임 끝");
