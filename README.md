@@ -122,7 +122,7 @@
 
 ---
 
-### 4. `printResult`
+### 4. `judgeResult`
 
 **설명**
 
