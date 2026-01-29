@@ -3,12 +3,12 @@ import java.util.HashMap;
 
 public class GameManager {
     private TurnPhase _turnPhase;
-    private NumberGenerator _numberGenerator;
-    private InputManager _inputManager;
-    private JudgeManager _judgeManager;
+    private final NumberGenerator _numberGenerator;
+    private final InputManager _inputManager;
+    private final JudgeManager _judgeManager;
     private String _generatedNumber;
     private String _userNumber;
-    private Map<TurnPhase, Runnable> _phaseHandler;
+    private final Map<TurnPhase, Runnable> _phaseHandler;
     public GameManager(){
         _turnPhase = TurnPhase.generateNumber;
         _numberGenerator = new NumberGenerator();
