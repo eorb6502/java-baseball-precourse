@@ -9,8 +9,8 @@ public class GameManager {
     private String _generatedNumber;
     private String _userNumber;
     private final Map<TurnPhase, Runnable> _phaseHandler;
-    public GameManager(){
-        _turnPhase = TurnPhase.generateNumber;
+    public GameManager(TurnPhase turnPhase){
+        _turnPhase = turnPhase;
         _numberGenerator = new NumberGenerator();
         _inputManager = new InputManager();
         _judgeManager = new JudgeManager();
