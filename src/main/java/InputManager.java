@@ -37,7 +37,7 @@ public class InputManager {
         while(true) {
             String userInput = scanner.next();
             if (!IsProperInput((userInput))) {
-                System.out.println("1 ~ 9 사이의 중복되지 않는 세 자리 숫자를 입력해주세요.");
+                System.out.print("1 ~ 9 사이의 중복되지 않는 세 자리 숫자를 입력해주세요.\n숫자를 입력해주세요 : ");
                 continue;
             }
             return userInput;
