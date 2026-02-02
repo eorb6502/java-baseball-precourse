@@ -10,6 +10,7 @@ public class GameManager {
     private String _generatedNumber;
     private String _userNumber;
     private final Map<TurnPhase, Runnable> _phaseHandler;
+    private static final int BASEBALL_SIZE = 3;
     public GameManager(TurnPhase turnPhase){
         _turnPhase = turnPhase;
         _numberGenerator = new NumberGenerator();
@@ -71,7 +72,7 @@ public class GameManager {
     private void handleJudgeResultPhase() {
         JudgeResult result = _judgeManager.JudgeResult(_generatedNumber, _userNumber);
         _outputManager.PrintJudgeResult(result);
-        if (result.strike() != 3) {
+        if (result.strike() != BASEBALL_SIZE) {
             _turnPhase = TurnPhase.inputNumber;
             return;
         }
