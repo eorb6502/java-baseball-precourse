@@ -19,4 +19,22 @@ public class NumberGenerator {
         }
         return result;
     }
+
+    public String GenerateFixedNumber(String fixedNumber) {
+        if (!IsProperNumber(fixedNumber)) {
+            throw new IllegalArgumentException("Invalid fixed number");
+        }
+        return fixedNumber;
+    }
+
+    private boolean IsProperNumber(String number) {
+        if (number == null || number.length() != BASEBALL_SIZE) return false;
+        Map<Character, String> map = new HashMap<>();
+        for (int i = 0; i < BASEBALL_SIZE; i++) {
+            char c = number.charAt(i);
+            if (c < '1' || c > '9' || map.containsKey(c)) return false;
+            map.put(c, "");
+        }
+        return true;
+    }
 }
