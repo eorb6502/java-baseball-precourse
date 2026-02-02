@@ -1,3 +1,6 @@
+package Model;
+
+import Constant.JudgeResult;
 import java.util.Map;
 import java.util.HashMap;
 public class JudgeManager {

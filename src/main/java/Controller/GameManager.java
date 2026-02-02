@@ -1,3 +1,13 @@
+package Controller;
+
+import Model.JudgeManager;
+import Model.NumberGenerator;
+import View.InputManager;
+import View.OutputManager;
+import Constant.TurnPhase;
+import Constant.ErrorEnum;
+import Constant.JudgeResult;
+
 import java.util.Map;
 import java.util.HashMap;
 

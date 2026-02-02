@@ -1,5 +1,10 @@
+package View;
+
 import java.util.HashMap;
 import java.util.Map;
+import Constant.ErrorEnum;
+import Constant.TurnPhase;
+import Constant.JudgeResult;
 
 public class OutputManager {
     // errorEnumStringMap의 string에는 뒤에 \n을 넣어 출력 메서드는 println이 아닌 print를 사용
