@@ -1,5 +1,9 @@
-package Constant;
+package constant;
 
 public enum TurnPhase {
-    quit, idle, generateNumber, inputNumber, judgeResult
+	QUIT,
+	IDLE,
+	GENERATE_NUMBER,
+	INPUT_NUMBER,
+	JUDGE_RESULT
 }

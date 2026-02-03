@@ -1,13 +1,15 @@
-package View;
+package view;
 
 import java.util.Scanner;
 
 public class InputManager {
-    Scanner scanner;
-    public InputManager() {
-        scanner = new Scanner(System.in);
-    }
-    public String GetInput() {
-        return scanner.next();
-    }
+	private final Scanner scanner;
+
+	public InputManager() {
+		scanner = new Scanner(System.in);
+	}
+
+	public String getInput() {
+		return scanner.next();
+	}
 }

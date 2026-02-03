@@ -1,5 +1,6 @@
-package Constant;
+package constant;
 
 public enum ErrorEnum {
-    idleInputError, userInputError
+	IDLE_INPUT_ERROR,
+	USER_INPUT_ERROR
 }
